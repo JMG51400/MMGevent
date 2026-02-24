@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MMG Évent — Location de matériel événementiel : photobooth, bars, pour mariages, anniversaires et événements festifs. Marne (51), Aisne (02), Ardennes (08).">
+    <title>MMGévent — Location Photobooths et Bars</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <!-- Bouton menu mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+
+    <!-- Overlay mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-stars" id="sidebarStars"></div>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="MMG Event Logo">
+            </div>
+
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="index.html" class="active">
+                            <span class="icon"><i class="fa-solid fa-house"></i></span>
+                            Accueil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mat_photo.html">
+                            <span class="icon"><i class="fa-solid fa-camera"></i></span>
+                            Nos Photobooth's
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="bars.html"><span class="icon"><i class="fa-solid fa-glass-martini-alt"></i></span>Nos Bar's</a>
+                    </li>
+                    <li>
+                        <a href="resaform.html">
+                            <span class="icon"><i class="fa-solid fa-calendar-check"></i></span>
+                            Réservations
+                        </a>
+                    </li>
+                    <li>
+                        <a href="nous.html">
+                            <span class="icon"><i class="fa-solid fa-users"></i></span>
+                            A Propos De Nous
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="logo-menu">
+                <img src="images/logoseul.png" alt="MMG Event"width= "150" height= "150">
+            </div>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <header class="banner">
+                <img src="images/logo.png" alt="MMG Event" class="banner-logo">
+                
+                <h1>A Propos De <em>Nous</em></h1>
+                <h2>Faisons Connaissance...</h2>
+            </header>
+
+            <section class="content">
+                <div class="content-wrapper" id="contentArea">
+                    <!-- Contenu injecté par JS -->
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                
+                    <div class="footer-section">
+                   
+                        <h3>À propos</h3>
+                        <a href="ML.html">Mentions Légales</a>
+                        <a href="CGV.html">CGV</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Services</h3>
+                        <a href="mat_photo.html">Photobooth's</a>
+                        <a href="bars.html">Les Bar's</a>
+                        <a href="resaform.html">Informations & Devis</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contacts</h3>
+                        <a href="mailto:contact1@mmgevent.fr">Contact 1 </a>
+                        <a href="mailto:contact2@mmgevent.fr">Contact 2 </a>
+                        <p><i class="fa-solid fa-phone" style="color:var(--gold);margin-right:6px;font-size:11px;"></i>06 12 34 56 78</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Réseaux Sociaux</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-facebook"></i> Facebook
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright"> 
+                
+                    <p>&copy; 2026 MMG Évent — Tous droits réservés. By JMG</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+    /* ===== STARS ===== */
+    function createStars(container, count) {
+        const frag = document.createDocumentFragment();
+        for (let i = 0; i < count; i++) {
+            const s = document.createElement('div');
+            s.className = 'star';
+            s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${(Math.random()*4).toFixed(2)}s;animation-duration:${(2+Math.random()*3).toFixed(2)}s;opacity:${(Math.random()*0.7+0.1).toFixed(2)}`;
+            frag.appendChild(s);
+        }
+        container.appendChild(frag);
+    }
+    createStars(document.getElementById('stars'), 180);
+    createStars(document.getElementById('sidebarStars'), 40);
+
+    /* ===== MOBILE MENU ===== */
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+    }
+
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', closeSidebar);
+
+    /* ===== PAGE CONTENT ===== */
+    const pageContent = {
+        accueil: `
+            
+            <div class="intro-block">
+                <p>Nous sommes spécialisés dans la création d'événements exceptionnels qui marquent les esprits. Notre équipe de professionnels passionnés met à votre service son expertise et sa créativité pour transformer vos idées en réalité.</p>
+                <p>Que ce soit pour un mariage élégant, un événement corporatif prestigieux, ou une célébration privée intime, nous offrons des solutions complètes et personnalisables pour que votre événement soit unique et répondent vos attentes.</p>
+                <p>Bla bla bla bla et bien plus...</p>
+               
+                    </div>
+
+                    
+
+           
+            
+        `,
+
+        photobooth: `
+            <h2>Nos Photobooth's</h2>
+            <div class="intro-block">
+                <p>Immortalisez les moments de joie avec nos photobooth's. Des souvenirs fixés à jamais, instantanés et amusants pour tous vos invités.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="section-tag">Essentiel</span>
+                    <h3>Borne SimplyParty</h3>
+                    <p>Box photo élégante avec impressions instantanées et personnalisées. Fonds, cadres et formats numériques, mise en réseau possible.</p>
+                    <h4>À partir de 279,99€ / jour</h4>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Populaire</span>
+                    <h3>Borne Signature</h3>
+                    <p>Personnalisable fonds et cadres, avec Pack impression 200 photos inclus.</p>
+                    <h4>À partir de 319,99€ / jour</h4>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Premium</span>
+                    <h3>Borne Signature Plus</h3>
+                    <p>Personnalisable fonds et cadres, avec Pack impression 400 photos inclus.</p>
+                    <h4>À partir de 419,99€ / jour</h4>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Connecté</span>
+                    <h3>Club Connect</h3>
+                    <p>Personnalisable fonds et cadres, Pack impression 400 photos + formats numériques.</p>
+                    <h4>À partir de 449,99€ / jour</h4>
+                </div>
+                <div class="service-card cta-card">
+                   
+                </div>
+            </div>
+        `,
+
+        bars: `
+            <h2>Nos Bar's</h2>
+            <div class="intro-block">
+                <p>Ajoutez une dimension gourmande à votre événement avec nos bars thématiques. Tenus par votre équipe ou par nos prestataires, ils s'adaptent à tous les styles de fêtes.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="section-tag">Sucré</span>
+                    <h3>Bar à Bonbons</h3>
+                    <p>Une explosion de couleurs et de saveurs pour petits et grands. Personnalisable à votre thème de couleur et ambiance.</p>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Fraîcheur</span>
+                    <h3>Bar à Glaces</h3>
+                    <p>Rafraîchissez vos invités avec une sélection de glaces artisanales. Idéal pour les réceptions estivales.</p>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Gourmand</span>
+                    <h3>Bar à Goûter</h3>
+                    <p>Un coin douceur pour les petits comme pour les grands : gâteaux, viennoiseries et boissons chaudes.</p>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Festif</span>
+                    <h3>Bar à Boissons</h3>
+                    <p>Des formules complètes pour désaltérer vos convives avec style. Softs, cocktails sans alcool et plus encore.</p>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Options</span>
+                    <h3>Plusieurs configurations</h3>
+                    <p>Plusieurs bars peuvent être associés à votre événement, tenus par vous-même ou un prestataire. Choisissez le forfait qui correspond à votre budget.</p>
+                </div>
+                <div class="service-card cta-card">
+                    
+                </div>
+            </div>
+        `,
+
+        reservations: `
+            <h2>Réservations</h2>
+            <div class="intro-block">
+                <p>Prêt à créer un événement inoubliable ? Contactez-nous dès aujourd'hui pour discuter de votre projet. Premier rendez-vous de consultation <strong style="color:var(--gold)">offert !</strong></p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="section-tag">Étape 1</span>
+                    <h3>Approche</h3>
+                    <p>Rencontrons-nous pour comprendre vos besoins et vos envies. Premier rendez-vous offert pour tous les projets.</p>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Étape 2</span>
+                    <h3>Devis Personnalisé</h3>
+                    <p>Recevez un devis détaillé et transparent, adapté à votre budget et vos besoins spécifiques.</p>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Étape 3</span>
+                    <h3>Planification</h3>
+                    <p>Notre équipe vous accompagne dans chaque étape de l'organisation de votre événement.</p>
+                </div>
+                <div class="service-card">
+                    <span class="section-tag">Contact</span>
+                    <h3>Nous Joindre</h3>
+                    <p>Email : contact1@mmgevent.fr<br>Tél : +33 6 12 34 56 78<br>Disponible 7j/7</p>
+                </div>
+                <div class="service-card cta-card" style="grid-column: 1 / -1;">
+                    <a href="resaform.html">Formulaire de réservation</a>
+                </div>
+            </div>
+            <p style="margin-top:40px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);font-style:italic;">
+                Nous serions ravis de contribuer au succès de votre événement.
+            </p>
+        `
+    };
+
+    /* ===== NAVIGATION ===== */
+    const menuLinks = document.querySelectorAll('.menu a');
+    const contentArea = document.getElementById('contentArea');
+
+    function loadPage(page) {
+        if (pageContent[page]) {
+            contentArea.style.opacity = '0';
+            contentArea.style.transform = 'translateY(12px)';
+            setTimeout(() => {
+                contentArea.innerHTML = pageContent[page];
+                contentArea.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                contentArea.style.opacity = '1';
+                contentArea.style.transform = 'translateY(0)';
+            }, 180);
+        }
+    }
+
+    // Chargement initial
+    loadPage('accueil');
+    </script>
+</body>
+</html>
