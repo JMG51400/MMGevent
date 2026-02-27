@@ -23,7 +23,9 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-stars" id="sidebarStars"></div>
             <div class="logo-container">
-                <img src="images/logo.png" alt="MMG Event Logo">
+             <a href="index.html" title="Page d'Accueil">
+            <img alt="MMG Event Logo"src="images/logo.png"width="120"height="80" /></a>
+            
             </div>
             <nav>
                 <ul class="menu">
@@ -34,7 +36,10 @@
                      <li> <a href="nous.html"><span class="icon"><i class="fa-solid fa-users"></i></span>A Propos De Nous</a></li>
                 </ul>
             </nav>
-            <div class="logo-menu"><img src="images/logoseul.png" alt="MMG Event"></div>
+            <div class="logo-menu">
+            <a href="index.html" title="Page d'Accueil">
+            <img alt="MMG Event Logo"src="images/logoseul.png"/></a>
+            </div>
         </aside>
 
         <main class="main-content">
@@ -74,8 +79,11 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
-                                <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
-                                <p class="catalog-price">À partir de: 279,99€ / jour</p>
+                                <div class="catalog-card-btns">
+                               <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('simply-party')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                              </div>
+                              <p class="catalog-price">À partir de: 279,99€ / jour</p>
                             </div>
                         </div>
 
@@ -96,8 +104,12 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
+                            <div class="catalog-card-btns">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
-                                <p class="catalog-price">À partir de: 319,99€ / jour</p>
+                                <button class="catalog-info-btn" onclick="openInfo('signature')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                          </div>
+                         <p class="catalog-price">À partir de: 319,99€ / jour</p>
+                         
                             </div>
                         </div>
 
@@ -119,9 +131,13 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
+                               <div class="catalog-card-btns">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
-                                <p class="catalog-price">À partir de 419,99€ / jour</p>
+                                <button class="catalog-info-btn" onclick="openInfo('signature-plus')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                               </div>
+                              <p class="catalog-price">À partir de 419,99€ / jour</p>
                             </div>
+                             
                         </div>
 
                         <div class="catalog-card">
@@ -141,9 +157,13 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
+                               <div class="catalog-card-btns">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
-                                <p class="catalog-price">À partir de 449,99€ / jour</p>
-                            </div>
+                                <button class="catalog-info-btn" onclick="openInfo('club-connect')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                             </div>
+                            <p class="catalog-price">À partir de 449,99€ / jour</p>
+                            
+                             </div>
                         </div>
 
                         <div class="catalog-card">
@@ -164,7 +184,10 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
+                               <div class="catalog-card-btns">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('club-connect-plus')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                                 </div>
                                 <p class="catalog-price">À partir de 799,99€ / jour</p>
                             </div>
                         </div>
@@ -192,8 +215,11 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
+                               <div class="catalog-card-btns">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
-                                <p class="catalog-price">À partir de 419,99€ / jour</p>
+                                <button class="catalog-info-btn" onclick="openInfo('miroir-style')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                                </div>
+                               <p class="catalog-price">À partir de 419,99€ / jour</p>
                             </div>
                         </div>
 
@@ -216,7 +242,10 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
+                               <div class="catalog-card-btns">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('miroir-style-plus')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                                 </div>
                                 <p class="catalog-price">À partir de 519,99€ / jour</p>
                             </div>
                         </div>
@@ -239,8 +268,11 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
+                               <div class="catalog-card-btns">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
-                                <p class="catalog-price">À partir de 449,99€ / jour</p>
+                                <button class="catalog-info-btn" onclick="openInfo('miroir-connect')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                                </div>
+                               <p class="catalog-price">À partir de 449,99€ / jour</p>
                             </div>
                         </div>
 
@@ -263,7 +295,10 @@
                                 </div>
                             </div>
                             <div class="catalog-card-footer">
+                               <div class="catalog-card-btns">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('miroir-connect-plus')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                                 </div>
                                 <p class="catalog-price">À partir de: 539,99€ / jour</p>
                             </div>
                         </div>
@@ -290,9 +325,14 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="catalog-card-footer">
+                            <div class="catalog-card-footer">   
+                            <div class="catalog-card-btns">
+                            
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
-                                <p class="catalog-price">À partir de 89,99€ / heure / personne</p>
+                                <button class="catalog-info-btn" onclick="openInfo('assistance')"><i class="fa-solid fa-circle-info"></i> Infos</button>
+                                </div>
+                               <p class="catalog-price">À partir de 89,99€ / heure / personne</p>
+                                 </div>
                             </div>
                         </div>
 
@@ -335,6 +375,237 @@
         </main>
     </div>
 
+
+    <!-- ===== MODALES INFOS ===== -->
+    <div id="info-overlay" onclick="closeInfo()"></div>
+
+    <div class="info-modal" id="modal-simply-party">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Simply Party</span>
+             <h4>À partir de: 279,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le forfait <strong>Simply Party</strong> est notre formule d'entrée de gamme idéale pour les petits événements festifs.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Borne photographique numérique livrée et installée</li>
+                <li>Fonds et cadres personnalisables selon votre thème</li>
+                <li>Partage instantané par QR code (email / SMS)</li>
+                <li>Récupération de tous les fichiers numériques après l'événement</li>
+                <li>Interface tactile intuitive, prise en main immédiate</li>
+                <li>On peut rajouter encore des lignes de BLA bla bla bla bla...</li>
+                <li>BLA bla bla bla bla bla bla bla bla...</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Livraison et reprise selon zone géographique (Marne 51, Aisne 02, Ardennes 08). Devis personnalisé sur demande.</p>
+      
+         <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+          
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="info-modal" id="modal-signature">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Signature</span>
+            <h4>À partir de: 319,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le forfait <strong>Signature</strong> enrichit l'expérience avec l'impression photo instantanée pour un souvenir tangible.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Borne photographique avec imprimante intégrée</li>
+                <li>Fonds et cadres personnalisables sur mesure</li>
+                <li>Pack impression 200 photos haute qualité inclus</li>
+                <li>Impressions instantanées format 10×15 cm</li>
+                <li>Récupération de tous les fichiers numériques</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Au-delà des 200 impressions incluses, un supplément s'applique. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
+
+    <div class="info-modal" id="modal-signature-plus">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Signature Plus</span>
+            <h4>À partir de: 419,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le forfait <strong>Signature Plus</strong> est pensé pour les événements avec de nombreux invités, avec un volume d'impression doublé.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Borne photographique avec imprimante intégrée</li>
+                <li>Fonds et cadres personnalisables sur mesure</li>
+                <li>Pack impression 400 photos haute qualité inclus</li>
+                <li>Idéal pour mariages, anniversaires et événements d'entreprise</li>
+                <li>Impressions instantanées format 10×15 cm</li>
+                <li>Récupération de tous les fichiers numériques</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Au-delà des 400 impressions incluses, un supplément s'applique. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
+
+    <div class="info-modal" id="modal-club-connect">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Club Connect</span>
+            <h4>À partir de: 449,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le forfait <strong>Club Connect</strong> ajoute la dimension réseau pour partager les souvenirs en temps réel.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Borne photographique avec imprimante intégrée</li>
+                <li>Fonds et cadres personnalisables sur mesure</li>
+                <li>Pack impression 400 photos inclus</li>
+                <li>Mise en réseau des photos (galerie en ligne partagée)</li>
+                <li>Récupération de tous les fichiers numériques</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Connexion internet requise pour la fonctionnalité réseau. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
+
+    <div class="info-modal" id="modal-club-connect-plus">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Club Connect Plus</span>
+            <h4>À partir de: 799,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Notre formule <strong>Club Connect Plus</strong> est le summum de l'expérience photobooth connecté, avec impressions illimitées.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Borne photographique avec imprimante intégrée</li>
+                <li>Fonds et cadres personnalisables sur mesure</li>
+                <li>Vue en direct sur écran secondaire pour les invités</li>
+                <li>Impressions illimitées tout au long de l'événement</li>
+                <li>Mise en réseau des photos (galerie en ligne partagée)</li>
+                <li>Récupération de tous les fichiers numériques</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Connexion internet requise. Installation incluse. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
+
+    <div class="info-modal" id="modal-miroir-style">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Miroir Style</span>
+            <h4>À partir de: 419,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le <strong>Miroir Style</strong> apporte un effet spectaculaire et élégant à vos événements grâce à son interface miroir interactive.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Miroir photographique interactif grand format</li>
+                <li>Animations et effets visuels à l'écran</li>
+                <li>Fonds et cadres personnalisables</li>
+                <li>Pack impression 200 photos inclus</li>
+                <li>Récupération de tous les fichiers numériques</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Livraison et installation comprises selon zone. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
+
+    <div class="info-modal" id="modal-miroir-style-plus">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Miroir Style Plus</span>
+            <h4>À partir de: 519,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le <strong>Miroir Style Plus</strong> double la capacité d'impression pour les grandes célébrations sans compromis.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Miroir photographique interactif grand format</li>
+                <li>Animations et effets visuels à l'écran</li>
+                <li>Fonds et cadres personnalisables</li>
+                <li>Pack impression 400 photos inclus</li>
+                <li>Volume doublé pour les grandes célébrations</li>
+                <li>Récupération de tous les fichiers numériques</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Livraison et installation comprises selon zone. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
+
+    <div class="info-modal" id="modal-miroir-connect">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Miroir Connect</span>
+            <h4>À partir de: 449,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le <strong>Miroir Connect</strong> allie le spectacle du miroir interactif et la puissance du partage réseau en temps réel.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Miroir photographique interactif grand format</li>
+                <li>Animations et effets visuels à l'écran</li>
+                <li>Fonds et cadres personnalisables sur mesure</li>
+                <li>Pack impression 200 photos inclus</li>
+                <li>Mise en réseau des photos (galerie en ligne partagée)</li>
+                <li>Récupération de tous les fichiers numériques</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Connexion internet requise pour la fonctionnalité réseau. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
+
+    <div class="info-modal" id="modal-miroir-connect-plus">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Miroir Connect Plus</span>
+            <h4>À partir de: 539,99€</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Notre formule premium <strong>Miroir Connect Plus</strong> : le must absolu pour une expérience miroir connectée et un volume d'impression maximal.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Miroir photographique interactif grand format</li>
+                <li>Animations et effets visuels à l'écran</li>
+                <li>Fonds et cadres personnalisables sur mesure</li>
+                <li>Pack impression 400 photos inclus</li>
+                <li>Volume doublé pour les grandes célébrations</li>
+                <li>Mise en réseau des photos (galerie en ligne partagée)</li>
+                <li>Récupération de tous les fichiers numériques</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Connexion internet requise. Installation incluse. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
+
+    <div class="info-modal" id="modal-assistance">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Assistance Personne</span>
+            <h4> À partir de: 89.99€ /h</h4> 
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>L'option <strong>Assistance Personne</strong> vous garantit un membre de notre équipe dédié à votre événement de A à Z.</p>
+            <p><strong>Inclus dans cette option :</strong></p>
+            <ul class="info-list">
+                <li>Personnel qualifié et formé à nos équipements</li>
+                <li>Gestion complète de l'installation et du matériel</li>
+                <li>Accueil, animation et guidage de vos invités</li>
+                <li>Disponible pour toute la durée de l'événement</li>
+                <li>Démontage et reprise du matériel en fin de soirée</li>
+            </ul>
+            <p><strong>Conditions :</strong> Tarif à l'heure par personne. Durée minimale de 3h. Disponibilité selon planning. Devis personnalisé sur demande.</p>
+        </div>
+        <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+    </div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function createStars(container, count) {
         const frag = document.createDocumentFragment();
@@ -348,6 +619,20 @@
     }
     createStars(document.getElementById('stars'), 180);
     createStars(document.getElementById('sidebarStars'), 40);
+
+
+    // ===== INFOS MODALES =====
+    function openInfo(id) {
+        document.querySelectorAll('.info-modal').forEach(m => m.classList.remove('active'));
+        const modal = document.getElementById('modal-' + id);
+        const infoOverlay = document.getElementById('info-overlay');
+        if (modal) { modal.classList.add('active'); infoOverlay.classList.add('active'); }
+    }
+    function closeInfo() {
+        document.querySelectorAll('.info-modal').forEach(m => m.classList.remove('active'));
+        document.getElementById('info-overlay').classList.remove('active');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeInfo(); });
 
     const menuToggle = document.getElementById('menuToggle');
     const sidebar = document.getElementById('sidebar');

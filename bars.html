@@ -23,7 +23,9 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-stars" id="sidebarStars"></div>
             <div class="logo-container">
-                <img src="images/logo.png" alt="MMG Event Logo">
+               <a href="index.html" title="Page d'Accueil">
+            <img alt="MMG Event Logo"src="images/logo.png"width="120"height="80" /></a>
+            
             </div>
             <nav>
                 <ul class="menu">
@@ -34,7 +36,10 @@
                     <li> <a href="nous.html"><span class="icon"><i class="fa-solid fa-users"></i></span>A Propos De Nous</a></li>
                 </ul>
             </nav>
-            <div class="logo-menu"><img src="images/logoseul.png" alt="MMG Event"></div>
+           <div class="logo-menu">
+            <a href="index.html" title="Page d'Accueil">
+            <img alt="MMG Event Logo"src="images/logoseul.png"/></a>
+            </div>
         </aside>
 
         <main class="main-content">
@@ -74,6 +79,7 @@
                             </div>
                             <div class="catalog-card-footer">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('bar-bonbons')"><i class="fa-solid fa-circle-info"></i> Infos</button>
                                 <p class="catalog-price">À partir de 349,99€ / jour</p>
                             </div>
                         </div>
@@ -96,6 +102,7 @@
                             </div>
                             <div class="catalog-card-footer">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('bar-glaces')"><i class="fa-solid fa-circle-info"></i> Infos</button>
                                 <p class="catalog-price">À partir de 349,99€ / jour</p>
                             </div>
                         </div>
@@ -119,6 +126,7 @@
                             </div>
                             <div class="catalog-card-footer">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('bar-gouters')"><i class="fa-solid fa-circle-info"></i> Infos</button>
                                 <p class="catalog-price">À partir de 349,99€ / jour</p>
                             </div>
                         </div>
@@ -142,6 +150,7 @@
                             </div>
                             <div class="catalog-card-footer">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('bar-boissons')"><i class="fa-solid fa-circle-info"></i> Infos</button>
                                 <p class="catalog-price">À partir de 349,99€ / jour</p>
                             </div>
                         </div>
@@ -169,6 +178,7 @@
                             </div>
                             <div class="catalog-card-footer">
                                 <a href="resaform.html" class="catalog-resa-btn"><i class="fa-solid fa-calendar-check"></i> Demande de réservation</a>
+                                <button class="catalog-info-btn" onclick="openInfo('assistance-bar')"><i class="fa-solid fa-circle-info"></i> Infos</button>
                                 <p class="catalog-price">À partir de 89,99€ / heure / personne</p>
                             </div>
                         </div>
@@ -212,6 +222,107 @@
         </main>
     </div>
 
+
+    <!-- ===== MODALES INFOS BARS ===== -->
+    <div id="info-overlay" onclick="closeInfo()"></div>
+
+    <div class="info-modal" id="modal-bar-bonbons">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Bar à Bonbons — Délices Sucré</span>
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le <strong>Bar à Bonbons</strong> est le clou du spectacle pour les anniversaires, mariages et fêtes d'enfants : un buffet coloré qui fait briller les yeux !</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Set de 10 bonbonnières garnies et décorées selon votre thème</li>
+                <li>Machine à Barbe à Papa professionnelle incluse</li>
+                <li>Machine à PopCorn incluse</li>
+                <li>Coffret électrique sécurisé (protection courts-circuits et surcharges)</li>
+                <li>Livraison, installation et reprise du matériel</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Les consommables (bonbons, sucre, maïs) sont à prévoir par le client sauf option contraire. Devis personnalisé sur demande.</p>
+        </div>
+    </div>
+
+    <div class="info-modal" id="modal-bar-glaces">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Bar à Glaces & Glaçons — Fraîcheur</span>
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le <strong>Bar à Glaces & Glaçons</strong> apporte une touche de fraîcheur originale et gourmande, parfait pour les événements estivaux.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Congélateur 200 L pour une grande capacité de stockage</li>
+                <li>Plancha spéciale glaces rouleaux (rolled ice cream)</li>
+                <li>Machine à Granité incluse</li>
+                <li>Coffret électrique sécurisé (protection courts-circuits et surcharges)</li>
+                <li>Livraison, installation et reprise du matériel</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Les consommables (glaces, sirops, bases à granité) sont à prévoir par le client sauf option contraire. Devis personnalisé sur demande.</p>
+        </div>
+    </div>
+
+    <div class="info-modal" id="modal-bar-gouters">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Bar à Goûters — Gourmand</span>
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le <strong>Bar à Goûters</strong> régale petits et grands avec des préparations fraîches sur place : crêpes, gaufres et popcorn au programme !</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Set de bacs inox professionnels pour la présentation</li>
+                <li>Crépière professionnelle pour crêpes fraîches</li>
+                <li>Gaufrier professionnel inclus</li>
+                <li>Machine à PopCorn incluse</li>
+                <li>Coffret électrique sécurisé (protection courts-circuits et surcharges)</li>
+                <li>Livraison, installation et reprise du matériel</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Les consommables (pâte à crêpes, gaufres, maïs, garnitures) sont à prévoir par le client sauf option contraire. Devis personnalisé sur demande.</p>
+        </div>
+    </div>
+
+    <div class="info-modal" id="modal-bar-boissons">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Bar à Boissons — Festif</span>
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>Le <strong>Bar à Boissons</strong> est l'incontournable pour animer vos soirées : softs, pressions ou cocktails, votre bar est prêt à accueillir vos invités.</p>
+            <p><strong>Inclus dans ce forfait :</strong></p>
+            <ul class="info-list">
+                <li>Set de verres au choix selon votre événement</li>
+                <li>Tireuse double bec pour softs et pressions</li>
+                <li>Réfrigérateur 100 L inclus</li>
+                <li>Machine à glaçons incluse</li>
+                <li>Coffret électrique sécurisé (protection courts-circuits et surcharges)</li>
+                <li>Livraison, installation et reprise du matériel</li>
+            </ul>
+            <p><strong>Conditions :</strong> Location à la journée. Les boissons sont à prévoir par le client sauf option contraire. Connexion électrique standard 220V requise. Devis personnalisé sur demande.</p>
+        </div>
+    </div>
+
+    <div class="info-modal" id="modal-assistance-bar">
+        <div class="info-modal-header">
+            <span class="info-modal-title">✦ Assistance Personne — Service</span>
+            <button class="info-modal-close" onclick="closeInfo()">✕</button>
+        </div>
+        <div class="info-modal-body">
+            <p>L'option <strong>Assistance Personne</strong> vous libère l'esprit : un membre qualifié de notre équipe prend en charge l'intégralité du service de vos bars.</p>
+            <p><strong>Inclus dans cette option :</strong></p>
+            <ul class="info-list">
+                <li>Personnel qualifié et formé à nos équipements</li>
+                <li>Gestion complète de vos bars choisis</li>
+                <li>Service professionnel et accueil de vos invités</li>
+                <li>Présent tout au long de l'événement</li>
+                <li>Démontage et reprise du matériel en fin de soirée</li>
+            </ul>
+            <p><strong>Conditions :</strong> Tarif à l'heure par personne. Durée minimale de 3h. Disponibilité selon planning. Se cumule avec n'importe quel forfait bar. Devis personnalisé sur demande.</p>
+        </div>
+    </div>
+
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function createStars(container, count) {
         const frag = document.createDocumentFragment();
@@ -225,6 +336,20 @@
     }
     createStars(document.getElementById('stars'), 180);
     createStars(document.getElementById('sidebarStars'), 40);
+
+
+    // ===== INFOS MODALES =====
+    function openInfo(id) {
+        document.querySelectorAll('.info-modal').forEach(m => m.classList.remove('active'));
+        const modal = document.getElementById('modal-' + id);
+        const infoOverlay = document.getElementById('info-overlay');
+        if (modal) { modal.classList.add('active'); infoOverlay.classList.add('active'); }
+    }
+    function closeInfo() {
+        document.querySelectorAll('.info-modal').forEach(m => m.classList.remove('active'));
+        document.getElementById('info-overlay').classList.remove('active');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeInfo(); });
 
     const menuToggle = document.getElementById('menuToggle');
     const sidebar = document.getElementById('sidebar');
