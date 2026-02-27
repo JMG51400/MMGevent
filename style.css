@@ -1282,3 +1282,12 @@ a { color: var(--gold-light); }
         display: none;
     }
 }
+
+/* ===== "+" doré dans les titres de carte ===== */
+.plus-gold {
+    color: var(--gold-light);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.2em;
+    text-shadow: 0 0 12px rgba(226, 192, 125, 0.7);
+}
