@@ -1181,7 +1181,19 @@ a { color: var(--gold-light); }
 }
 
 @media (max-width: 600px) {
+    .catalog-card-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .catalog-resa-btn {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+
     .catalog-info-btn {
+        order: 1;
         width: 100%;
         justify-content: center;
     }
