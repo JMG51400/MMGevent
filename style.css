@@ -856,7 +856,7 @@ a { color: var(--gold-light); }
 }
 
 .catalog-card:hover .catalog-card-img img {
-    transform: scale(1.04);
+    transform: scale(1.15);
 }
 
 .catalog-card-desc {

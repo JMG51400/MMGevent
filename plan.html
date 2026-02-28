@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MMG Évent — Plan du site, toutes nos pages en un coup d'oeil.">
+    <title>Plan Du Site — MMG Évent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        .plan-section-title {
+            font-family: 'Cormorant Garamond', serif;
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--gold-border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .plan-section-title:first-of-type { margin-top: 0; }
+        .plan-cards {
+            display: flex;
+            flex-direction: column;
+        }
+        .plan-link-card {
+            background: transparent;
+            border: none;
+            border-bottom: 0px solid rgba(201,169,97,0.12);
+            border-radius: 0;
+            padding: 16px 8px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: all 0.25s ease;
+            color: inherit;
+        }
+        .plan-link-card:first-child {
+            border-top: 0px solid rgba(201,169,97,0.12);
+        }
+        .plan-link-card:hover {
+            background: rgba(201,169,97,0.05);
+            padding-left: 16px;
+        }
+        .plan-link-icon {
+            width: 34px; height: 34px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gold);
+            font-size: 15px;
+            flex-shrink: 0;
+            opacity: 0.8;
+        }
+        .plan-link-body { flex: 1; }
+        .plan-link-name {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--gold);
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+        .plan-link-desc {
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-top: 2px;
+        }
+        .plan-link-arrow {
+            color: var(--gold);
+            opacity: 0.3;
+            font-size: 11px;
+            transition: opacity 0.25s, transform 0.25s;
+            flex-shrink: 0;
+        }
+        .plan-link-card:hover .plan-link-arrow {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">&#9776;</button>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-stars" id="sidebarStars"></div>
+            <div class="logo-container">
+               <a href="index.html" title="Page d'Accueil">
+            <img alt="MMG Event Logo"src="images/logo.png"width="120"height="80" /></a>
+            
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html"><span class="icon"><i class="fa-solid fa-house"></i></span>Accueil</a></li>
+                    <li><a href="mat_photo.html"><span class="icon"><i class="fa-solid fa-camera"></i></span>Nos Photobooth's</a></li>
+                    <li><a href="bars.html"><span class="icon"><i class="fa-solid fa-glass-martini-alt"></i></span>Nos Bar's</a></li>
+                    <li><a href="resaform.html"><span class="icon"><i class="fa-solid fa-calendar-check"></i></span>Réservations</a></li>
+                    <li> <a href="nous.html"><span class="icon"><i class="fa-solid fa-users"></i></span>A Propos De Nous</a></li>
+                    <li><a href="plan.html" class="active"><span class="icon"><i class="fa-solid fa-sitemap"></i></span>Plan Du Site</a></li>
+                </ul>
+            </nav>
+           <div class="logo-menu">
+            <a href="index.html" title="Page d'Accueil">
+            <img alt="MMG Event Logo"src="images/logoseul.png"/></a>
+           
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="banner">
+                 <a href="index.html" title="Page d'Accueil">
+            <img alt="MMG Event Logo"src="images/logo.png"width="160"height="60" /></a>
+            
+                
+                
+                <h1>Plan <em>Du Site</em></h1>
+                <h2>Toutes nos pages en un coup d'œil</h2>
+            </header>
+
+            <section class="content">
+                <div class="content-wrapper">
+
+                    <!-- NAVIGATION PRINCIPALE -->
+                    <h3 class="plan-section-title"><i class="fa-solid fa-compass"></i> Navigation Principale</h3>
+                    <div class="plan-cards">
+                        <a href="index.html" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-solid fa-house"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Page d'Accueil</div>
+                                <div class="plan-link-desc">Point d'entrée du site, présentation de nos services</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right plan-link-arrow"></i>
+                        </a>
+                        <a href="nous.html" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">À Propos De Nous</div>
+                                <div class="plan-link-desc">Notre histoire, notre équipe et nos valeurs</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right plan-link-arrow"></i>
+                        </a>
+                        <a href="resaform.html" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Réservations & Devis</div>
+                                <div class="plan-link-desc">Formulaire de contact et demande de devis personnalisé</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right plan-link-arrow"></i>
+                        </a>
+                    </div>
+
+                    <!-- NOS SERVICES -->
+                    <h3 class="plan-section-title"><i class="fa-solid fa-star"></i> Nos Services</h3>
+                    <div class="plan-cards">
+                        <a href="mat_photo.html" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-solid fa-camera"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Nos Photobooth's</div>
+                                <div class="plan-link-desc">Découvrez nos forfaits photobooth pour mariages, anniversaires et événements</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right plan-link-arrow"></i>
+                        </a>
+                        <a href="bars.html" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-solid fa-glass-martini-alt"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Nos Bar's</div>
+                                <div class="plan-link-desc">Bars à bonbons, boissons, goûters, glaces et granités pour tous vos événements</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right plan-link-arrow"></i>
+                        </a>
+                    </div>
+
+                    <!-- INFORMATIONS LEGALES -->
+                    <h3 class="plan-section-title"><i class="fa-solid fa-scale-balanced"></i> Informations Légales</h3>
+                    <div class="plan-cards">
+                        <a href="ML.html" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-solid fa-file-lines"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Mentions Légales</div>
+                                <div class="plan-link-desc">Informations légales relatives à MMG Évent</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right plan-link-arrow"></i>
+                        </a>
+                        <a href="CGV.html" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-solid fa-file-contract"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Conditions Générales de Vente</div>
+                                <div class="plan-link-desc">Nos CGV applicables à toutes nos prestations</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right plan-link-arrow"></i>
+                        </a>
+                        <a href="plan.html" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-solid fa-sitemap"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Plan Du Site</div>
+                                <div class="plan-link-desc">Vous y êtes ! Vue d'ensemble de toutes les pages du site</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right plan-link-arrow"></i>
+                        </a>
+                    </div>
+
+                    <!-- RESEAUX SOCIAUX -->
+                    <h3 class="plan-section-title"><i class="fa-solid fa-share-nodes"></i> Nous Suivre</h3>
+                    <div class="plan-cards">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-brands fa-facebook"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Facebook</div>
+                                <div class="plan-link-desc">Suivez nos actualités et retrouvez nos photos sur Facebook</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square plan-link-arrow"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="plan-link-card">
+                            <div class="plan-link-icon"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="plan-link-body">
+                                <div class="plan-link-name">Instagram</div>
+                                <div class="plan-link-desc">Photos et coulisses de nos événements sur Instagram</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square plan-link-arrow"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                       <h3>Informations Légales</h3>
+                        <a href="ML.html">Mentions Légales</a>
+                        <a href="CGV.html">CGV</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Services</h3>
+                        <a href="mat_photo.html">Photobooth's</a>
+                        <a href="bars.html">Les Bar's</a>
+                        <a href="resaform.html">Informations & Devis</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <a href="/cdn-cgi/l/email-protection#70131f1e0411130441301d1d171506151e045e1602">Contact 1</a>
+                        <a href="/cdn-cgi/l/email-protection#ff9c90918b9e9c8bcdbf9292989a899a918bd1998d">Contact 2</a>
+                        <p><i class="fa-solid fa-phone" style="color:var(--gold);margin-right:6px;font-size:11px;"></i>06 12 34 56 78</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Réseaux Sociaux</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2026 MMG Évent — Tous droits réservés. By JMG</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+    function createStars(container, count) {
+        const frag = document.createDocumentFragment();
+        for (let i = 0; i < count; i++) {
+            const s = document.createElement('div');
+            s.className = 'star';
+            s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${(Math.random()*4).toFixed(2)}s;animation-duration:${(2+Math.random()*3).toFixed(2)}s;opacity:${(Math.random()*0.7+0.1).toFixed(2)}`;
+            frag.appendChild(s);
+        }
+        container.appendChild(frag);
+    }
+    createStars(document.getElementById('stars'), 180);
+    createStars(document.getElementById('sidebarStars'), 40);
+
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+    overlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+    </script>
+</body>
+</html>
